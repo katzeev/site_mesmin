@@ -131,38 +131,55 @@ body {
                 border-style: solid;
                 font-size: 14px;               
             }
-           table.preparation p.numero {
-                text-align: center;
-                width: 25px;
-                height: 25px;
-                background-color: #8BA1BB;                
-                color: white;                
-                font-size: 15px;
-                font-weight: bold;
-                padding-top: 4px;
-                box-sizing: border-box;
-                border-radius: 50px;
-                margin: 0;
-        
-           }
+           /* Centrage global */
+        .preparation-block {
+        text-align: center;
+        margin-top: 20px;
+        }
 
-            td.numero {
-                width: 1px;           /* force la cellule à prendre le moins d’espace possible */
-                white-space: nowrap;  /* empêche les retours à la ligne inutiles */
-                padding-right: 4px;   /* réduit l’écart entre chiffre et texte */
-                text-align: center;   /* ou left si tu veux coller plus */
-            }
-           td.etape {
-               vertical-align: top;
-               font-size: 14px;
-               padding-left: 20px;
-               margin-right: 20px;
-            
-           }
+        /* Ligne bleue sous le titre */
+        /* .separator {
+        border: none;
+        height: 5px;
+        background-color: #d3e4f4;
+        width: 60%;
+        margin: 10px auto 20px auto;
+        } */
 
-           table.preparation tr {
-               margin-bottom: 40px;
-           }
+        /* Bloc centré contenant toutes les étapes */
+        .etapes {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        }
+
+        /* Ligne individuelle : numéro + texte */
+        .etape {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        }
+
+        /* Style du numéro */
+        .numero {
+        background-color: #9ab3d8;
+        color: white;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        }
+
+        /* Texte de chaque étape */
+        .texte {
+        font-size: 15px;
+        text-align: left;
+        }
           
            
            

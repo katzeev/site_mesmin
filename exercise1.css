@@ -1,52 +1,79 @@
-*{
+        *{
             overflow: auto;
            }
         
 
-body {
+            body {
                 background-color: #8BA1BB;
                 font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                padding: 20px;
             }
+
             p.categorie {
                 background-color: black;
                 color: white;
                 display: inline-block;
                 padding: 12px 20px;                
                 font-weight: bold;
-                margin-bottom: 0px;
-                margin-top: 50px;
-                width: auto;
+                margin: 50px auto 0 auto;
+                /* margin-bottom: 0px; */
+                /* margin-top: 50px; */
+                width: 100px;
+                text-align: center;                 
+                margin: 0; 
+               
                 
-
             }
 
             .categorie {
                 text-align: center;
-                margin-bottom: -20px;
                 width: 100%;
+                /* margin-bottom: -20px; */
                 height: auto;
             }
 
             div.container {
                 background-color: white;
-                margin: 0px 10% 80px 10%;
-                padding: 30px;
-                min-width: 400px;
-                box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 20%);
-                
+                margin: 20px auto;
+                padding: 0 20px 30px;
+                width: 100%;
+                min-width: 350px;
+                max-width: 600px;
+                /* margin-left: auto;
+                margin-right: auto; */
+                box-shadow: 0px 10px 20px rgb(0 0 0 / 20%);
+                border-radius: 8px;
+                margin: 0 auto;
+                position: relative;
+                overflow: visible;
+             
+            }
+
+            .categorie-wrapper {
+                display: flex;
+                justify-content: center; /* centre horizontalement */
+                margin-top: 80px;
             }
 
             h1 {
                 text-align: center;
+                margin-top: 20px;
             }
 
             p.description {
                 text-align: center;
                 max-width: 700px;
-                min-width: 350px;               
+                min-width: 400px;               
                 display: inline-block;
                 font-size: 17px;
-                
+                margin: 10px auto;
+                padding: 0 15px;
+
             }
             div.description {
                 text-align: center;
@@ -60,9 +87,196 @@ body {
                 height: 2px;              /* Épaisseur du trait */
                 background-color: gainsboro; /* Couleur du trait */
                 width: 25%;               /* Largeur du séparateur */
-                margin: auto auto;        /* Marge autour + centré */
+                margin: 10px auto;        /* Marge autour + centré */
                 border-radius: 5px;       /* Coins arrondis */
             }
+
+            .positionnement {
+                position: relative;
+                margin: 20px 0;
+                display: inline-block;
+                width: 100%;
+            }
+
+            table.info {
+                 position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                color: white;
+                text-align: center;
+                background-color: #87addb70;
+                font-size: 15px;
+                height: 70px;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            
+            
+            table.info th {
+                                
+               vertical-align: bottom;
+               padding-bottom: 5px;          
+            }
+
+            table.info td {
+                vertical-align: top;
+                padding-top: 5px;
+                
+            }
+            img.categorie {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                object-fit: cover;
+                min-height: 200px;
+                position: relative;
+            }
+
+            
+            /* div.positionnement {
+                position: relative;
+            } */
+
+            .colonne {
+                flex: 1;
+                min-width: 250px;
+            }
+
+
+            div.colonne h2{
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 15px;     
+                margin-bottom: 20px;                
+                border-bottom: 5px solid #87addb70;             
+                padding-bottom: 8px;
+                               
+                
+            }
+            div.colonne1 {                                
+                display: inline-block;
+                
+            }
+            div.colonne2 {
+              margin-top: 25px;
+                             
+            }
+            div.classement p{
+                text-align: center;
+                margin: 5px 16%;
+                padding: 5px;
+                border-width: 2px;              
+                border: #e7eef770;
+                border-style: solid;
+                font-size: 14px;               
+            }
+           /* Centrage global */
+            .preparation-block {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+       
+        /* Bloc centré contenant toutes les étapes */
+            .etapes {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                max-width: 100%;
+            }
+
+            /* Ligne individuelle : numéro + texte */
+            .etape {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                max-width: 100%;
+            }
+
+        /* Style du numéro */
+            .numero {
+                background-color: #9ab3d8;
+                color: white;
+                border-radius: 50%;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 14px;
+                flex-shrink: 0;
+            }
+
+            /* Texte de chaque étape */
+            .texte {
+                font-size: 15px;
+                text-align: left;
+            }
+          
+    
+            .recette {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+
+            .ingredients-block, .preparation-block {
+                text-align: center;
+            }
+
+            /* Titres */
+            .ingredients-block h2,
+            .preparation-block h2 {
+                margin-bottom: 5px;
+            }
+
+            .ingredients-block p,
+            .preparation-block p {
+                margin: 5px 0;
+            }
+    
+        /* sytle pour Ordinateur */
+        @media only screen and (min-width: 768px) {
+
+            div.container {              
+                margin: 0px 10% 80px 10%;
+                padding: 30px;
+                min-width: 400px;                
+                
+            }
+
+            .recette {
+                    flex-wrap:nowrap;
+                    align-items: center;
+            }
+                
+            .colonne1 {
+                    padding-right: 20px;
+            }
+                
+            .colonne2 {
+                    padding-left: 20px;
+            }
+                
+            .classement {
+                    max-width: 100%;
+            }
+                
+            .classement p {
+                    margin: 5px 5%;
+            }
+                
+            p.description {
+                    min-width: 90%;
+            }
+            
 
             table.info {
                 position: absolute;
@@ -71,13 +285,10 @@ body {
                 color: white; 
                 text-align: center; 
                 background-color: #87addb70; 
-                font-size: 15px; 
-                height: 70px;
-                
-            }
-            div.positionnement {
-                position: relative;
-            }
+                font-size: 12px; 
+                height: 50px;
+            }  
+            
             
             table.info th {
                                 
@@ -89,122 +300,10 @@ body {
                 vertical-align: top;
                 
             }
-            img.categorie {
-               object-fit: cover;
-               min-height: 200px;
+
+            div.preparation-block h2 {
                
-             
-            }
-
-            div.colonne {
-                width: 45%;
-                
-            }
-
-            div.colonne h2{
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 15px;     
-                margin-top: 30px;
-                margin-bottom: 20px;
-                border-bottom: 7px solid #87addb70;
-                margin-right: 70px;
-                margin-left: 70px;
-                padding-bottom: 5px;
-                min-height: auto;
-                
-                
-            }
-            div.colonne1 {                                
-                display: inline-block;
-            }
-            div.colonne2 {
-               float: right;
                              
             }
-            div.classement p{
-                text-align: center;
-                margin: 5px 16% 0px 16%;
-                padding: 5px;
-                border-width: 2px;              
-                border-color: #e7eef770;
-                border-style: solid;
-                font-size: 14px;               
-            }
-           /* Centrage global */
-        .preparation-block {
-        text-align: center;
-        margin-top: 20px;
         }
-
-        /* Ligne bleue sous le titre */
-        /* .separator {
-        border: none;
-        height: 5px;
-        background-color: #d3e4f4;
-        width: 60%;
-        margin: 10px auto 20px auto;
-        } */
-
-        /* Bloc centré contenant toutes les étapes */
-        .etapes {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        }
-
-        /* Ligne individuelle : numéro + texte */
-        .etape {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        }
-
-        /* Style du numéro */
-        .numero {
-        background-color: #9ab3d8;
-        color: white;
-        border-radius: 50%;
-        width: 26px;
-        height: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        }
-
-        /* Texte de chaque étape */
-        .texte {
-        font-size: 15px;
-        text-align: left;
-        }
-          
-    
-        .recette {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* 👈 aligne les titres sur la même hauteur */
-            gap: 80px;
-            margin-top: 20px;
-        }
-
-        .ingredients-block, .preparation-block {
-            text-align: center;
-        }
-
-        /* Titres */
-        .ingredients-block h2,
-        .preparation-block h2 {
-        margin-bottom: 5px;
-        }
-
-        .ingredients-block p,
-        .preparation-block p {
-        margin: 5px 0;
-        }
-    
-
-           
-          
+         
